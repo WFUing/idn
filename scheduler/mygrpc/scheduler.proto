@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package kubeedge.schedule;
+
+message Request {
+  int32 type = 1;        // 请求类型
+  int64 arrivetime = 2;  // 到达时间
+  int64 deadline = 3;    // 期望的截止时间戳（单位：秒/毫秒）
+  double accuracy = 4;   // 期望的准确率
+  string hostname = 5;   // 发送请求的主机名
+  double datasize = 6;   // 传输的数据大小
+  double cpu = 7;        // 预期的cpu核数
+  double gpu = 8;        // 预期的gpu核数
+  double vpu = 9;        // 预期的vpu核数
+  double memory = 10;    // 预期的memory大小
+}
+
+// 表示一个主机和模型的二元组
+message Deployment {
+  string hostname = 1;  // 主机名
+  string model = 2;     // 部署的模型名称
+}
+
+message Response {
+  repeated Deployment deployments = 1; // 多个主机和模型的二元组
+}
+
+service Scheduler {
+  // 调度方法，接受一个 Request 并返回一个 Response
+  rpc Schedule (Request) returns (Response);
+}
