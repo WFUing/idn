@@ -1,0 +1,33 @@
+type,name,flops
+1,ResNet18,1.8
+1,ResNet50,3.8
+1,ResNet101,7.6
+1,ResNet152,11.3
+1,VGG16,15.3
+1,VGG19,19.6
+1,EfficientNetB0,0.39
+1,InceptionV3,5.7
+1,DenseNet121,2.9
+2,YOLOv3,65.9
+2,YOLOv4,72.2
+2,YOLOv5,25.6
+2,YOLOv7,17.4
+2,Faster R-CNN,180.0
+2,RetinaNet,210.0
+2,SSD,36.0
+3,FCN,15.0
+3,U-Net,27.0
+3,DeepLabV3,24.0
+3,SegNet,30.0
+4,Mask R-CNN,275.0
+4,YOLACT,138.0
+4,Panoptic FPN,320.0
+5,CRNN,10.0
+5,Tesseract OCR,0.5
+5,ASTER,15.0
+6,MTCNN,0.4
+6,RetinaFace,1.0
+6,FaceNet,1.6
+7,GAN,20.0
+7,StyleGAN2,35.0
+7,VQ-VAE-2,40.0
