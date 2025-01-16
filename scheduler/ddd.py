@@ -12,6 +12,7 @@ isn = InferenceServiceNet()
 
 print(isn.find_optimal_path('edge_1', 'cloud_1'))
 
+
 # print(isn.find_optimal_path('edge_1', 'cloud_1'))
 
 # from core.scheduler_env import SchedulingEnv
