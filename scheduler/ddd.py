@@ -2,13 +2,16 @@ from core.isn import InferenceServiceNet
 
 
 isn = InferenceServiceNet()
-print(isn.nodes)
-print(isn.models)
-total_models = sum(len(models) for models in isn.models.values())
-print(total_models)
+# print(isn.nodes)
+# print(isn.models)
+# total_models = sum(len(models) for models in isn.models.values())
+# print(total_models)
 
-model_counts_list = [len(models) for models in isn.models.values()]
-print(model_counts_list)
+# model_counts_list = [len(models) for models in isn.models.values()]
+# print(model_counts_list)
+
+print(isn.find_optimal_path('edge_1', 'cloud_1'))
+
 
 # print(isn.find_optimal_path('edge_1', 'cloud_1'))
 
